@@ -1,0 +1,206 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/top_pattern"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="-40dp"
+        android:src="@drawable/shapetop"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
+    <!-- profil section -->
+    <LinearLayout
+        android:id="@+id/profil_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/img_profil"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/logoaplikasi"
+                android:contentDescription="TODO"
+                tools:ignore="ContentDescription,HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_nama_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zayyan"
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="2dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/hallo_selam"
+            android:layout_width="247dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="24dp"
+            android:text="@string/hallo_selam"
+            android:textAppearance="@style/hallo_selam"
+            android:lineSpacingExtra="-9sp"
+            android:gravity="top"
+            />
+        <TextView
+            android:id="@+id/tv_titledash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="24dp"
+            android:text="Dashboard"
+            android:textColor="@color/Green"
+            android:textStyle="bold"
+            android:textSize="18dp">
+        </TextView>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_marginTop="-12dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/profil_section">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout17"
+                android:layout_width="390dp"
+                android:layout_height="370dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.7"
+                tools:layout_editor_absoluteX="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginHorizontal="24dp"
+                android:background="@drawable/bg_menu">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/menu_kegiatan"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:background="@drawable/menu_rectangle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="12dp"
+                    app:layout_constraintVertical_bias="0.2"
+                    android:layout_marginTop="24dp">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/kegiatan"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="10dp"
+                        tools:layout_editor_absoluteY="10dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/menu_wanilemper"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@drawable/menu_rectangle"
+                    app:layout_constraintStart_toEndOf="@+id/menu_kegiatan"
+                    app:layout_constraintTop_toTopOf="@+id/menu_kegiatan">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/wan"
+                        android:layout_margin="10dp"
+                        tools:layout_editor_absoluteX="10dp"
+                        tools:layout_editor_absoluteY="10dp"
+                        tools:ignore="MissingConstraints" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/menu_wanilem"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/menu_rectangle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/menu_kegiatan"
+                    app:layout_constraintVertical_bias="0.2">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/des"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="10dp"
+                        tools:layout_editor_absoluteY="10dp" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/menu_jumdes"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_marginStart="164dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/menu_rectangle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/menu_kegiatan">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/des"
+                        tools:layout_editor_absoluteX="10dp"
+                        tools:layout_editor_absoluteY="10dp"
+                        tools:ignore="MissingConstraints" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <RelativeLayout
+                android:id="@+id/mapbox"
+                android:layout_margin="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/constraintLayout17">
+
+                <TextView
+                    android:id="@+id/tv_titlelokasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lokasi Terkini"
+                    android:textColor="@color/Green"
+                    android:textStyle="bold"
+                    android:textSize="18dp">
+                </TextView>
+                <FrameLayout
+                    android:id="@+id/mapFrameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_below="@id/tv_titlelokasi" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
+

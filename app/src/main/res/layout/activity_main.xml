@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--Ini Layout Globalnya-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logoaplikasi">
+    </ImageView>
+
+        <!--Layout Form Input-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="240dp">
+        <!-- Judul "Masuk" -->
+        <TextView
+            android:id="@+id/textView_masuk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Masuk"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="1dp" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:boxBackgroundMode="outline"
+            app:boxBackgroundColor="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukan Email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/black">
+            </EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textinput_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:boxBackgroundMode="outline"
+            app:boxBackgroundColor="@color/white"
+            app:passwordToggleEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColorHint="@color/black">
+            </EditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- CheckBox "Ingat Saya" dan Tulisan "Lupa Password?" -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textinput_password"
+            android:layout_marginTop="12dp">
+
+            <CheckBox
+                android:id="@+id/checkBox_ingatSaya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingat Saya"
+                android:textColor="@color/Green"
+                android:textSize="14sp"
+                android:layout_marginTop="-12dp"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lupa Password?"
+                android:textColor="@color/Green"
+                android:textSize="14sp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="0dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="24dp">
+
+                <Button
+                    android:id="@+id/button_masuk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_field"
+                    android:text="Masuk"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_marginTop="24dp"/>
+
+                <TextView
+                    android:id="@+id/textView_daftar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Belum punya akun? Daftar"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginTop="12dp"
+                    android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
